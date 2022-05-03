@@ -7,11 +7,11 @@ getParameters(["resolution", "language", "time-zone", "platform"])
 ```
 2)	Необходима максимально подробная информация о пользователе (например, для сбора статистических данных о посетителях сайта). Сгенерированный отпечаток браузера не будет оставаться постоянным даже в рамках работы в одном браузере, но сведения об изменении какого-либо параметра также несут ценность, и поэтому должны быть собраны. В качестве анализируемых параметрах выбраны разрешение экрана, сглаживание шрифтов, тег canvas, cookie, локальное и сессионное хранилище, платформа, программное обеспечение, поставщик программного обеспечения, версия браузера, предпочитаемый язык и все языки системы, тип соединения, список плагинов, часовой пояс, глубина цвета и запрет на определение местоположения. 
 ```javascript
-getParameters(["canvas"])
+getParameters(["resolution", "font-smoothing", "canvas", "cookie", "local-storage", "session-storage", "platform", "sub-product", "user-agent", "vendor", "app-version", "language", "languages", "connection", "plugins", "time-zone", "color-depth", "do-not-track"])
 ```
 3)	Необходима максимально точная идентификация пользователя, пусть и в пределах одного браузера (например, первичная идентификация при входе в банковскую систему). Сгенерированный отпечаток не должен совпадать с отпечатками другого пользователя. Единственным параметрам, полностью удовлетворяющим этим условиям, является canvas.
 ```javascript
-getParameters(["resolution", "font-smoothing", "canvas", "cookie", "local-storage", "session-storage", "platform", "sub-product", "user-agent", "vendor", "app-version", "language", "languages", "connection", "plugins", "time-zone", "color-depth", "do-not-track"])
+getParameters(["canvas"])
 ```
 
 Шармаев Вадим, 2022г.
